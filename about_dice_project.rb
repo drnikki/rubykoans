@@ -6,7 +6,10 @@ class DiceSet
   attr_accessor :values
   # the number of integers you want between 1 and 6
   def roll(nums)
-    values = [1,2,3]
+    @values = Array.new
+    nums.times do |x|
+      @values.push(rand(1...6))
+    end
   end
 end
 
